@@ -11,6 +11,8 @@ Default: `modkey = "Mod4"`  (windows key)
 
 Example: `modkey = "Mod1"`  
 
+
+
 # Tags
 Tags are the names of the virtual desktops were windows live. In other window managers these are sometimes just called desktops. You can rename them to any unicode string including symbols/icons from popular icon libraries such as font-awesome.
 
@@ -19,4 +21,24 @@ Default: `tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]`
 Example: `tags = ["Browser ♖", "Term ♗", "Shell ♔", "Code ♕"]`
 
 
-# keybind 
+
+# Workspaces
+Workspaces are how you view tags (desktops). A workspace is a area on a screen or most likely the whole screen. in this areas you can view a given tag. 
+
+Default: `workspaces = []` (one workspace per screen)
+
+Example (two workspaces on a single ultrawide ): 
+
+```
+[[workspaces]]
+y = 0
+x = 0
+height = 1440
+width = 1720
+
+[[workspaces]]
+y = 0
+x = 1720
+height = 1440
+width = 1720
+```
