@@ -42,3 +42,35 @@ x = 1720
 height = 1440
 width = 1720
 ```
+
+
+# Keybind
+All other commands are keybindings. you can think of key bindings as a way of telling LeftWM to do something when a key combination is pressed. There are several types of key bindings. In order for the keybind event to fire, the keys listed in the modifier section should be held down, and the key in the key section should then be pressed. Here is a [list](https://github.com/leftwm/leftwm/blob/master/src/utils/xkeysym_lookup.rs) of all keys LeftWM can use as a modifier or a key. 
+
+Example
+```
+[[keybind]]
+command = "Execute"
+value = "vlc https://www.youtube.com/watch?v=oHg5SJYRHA0"
+modifier = []
+key = "XF86XK_AudioPlay"
+```
+
+
+# Keybind Commands
+## Execute
+## CloseWindow
+## SoftReload
+## MoveToLastWorkspace
+## SwapTags
+## MoveWindowUp
+## MoveWindowDown
+## FocusWindowUp
+## FocusWindowDown
+## NextLayout
+## PreviousLayout
+## FocusWorkspaceNext
+## FocusWorkspacePrevious
+## GotoTag
+## MoveToTag
+
