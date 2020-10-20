@@ -4,7 +4,7 @@
 
 
 # Modkey
-The modkey is the most import setting. It is used by many other settings and controls how key bindings work. 
+The modkey is the most important setting. It is used by many other settings and controls how key bindings work. 
 For more info please read [this](https://stackoverflow.com/questions/19376338/xcb-keyboard-button-masks-meaning) post on x11 Mod keys
 
 Default: `modkey = "Mod4"`  (windows key)
