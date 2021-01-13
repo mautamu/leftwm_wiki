@@ -47,7 +47,7 @@ width = 1720
 # Keybind
 All other commands are keybindings. you can think of key bindings as a way of telling LeftWM to do something when a key combination is pressed. There are several types of key bindings. In order for the keybind event to fire, the keys listed in the modifier section should be held down, and the key in the key section should then be pressed. [Here is a list of all keys LeftWM can use as a modifier or a key](https://github.com/leftwm/leftwm/blob/master/src/utils/xkeysym_lookup.rs). 
 
-Example
+*Example*
 ```
 [[keybind]]
 command = "Execute"
@@ -60,7 +60,7 @@ key = "XF86XK_AudioPlay"
 # Keybind Commands
 
 ## Execute
-Execute a shell command when a key combination is pressed
+Execute a shell command when a key combination is pressed.
 
 Example
 ```
@@ -71,46 +71,62 @@ modifier = ["modkey"]
 key = "p"
 ```
 
-## CloseWindow
-Closes the window that is currently focused. This is not a forceful quit. It is equivalent to clicking the (x) in the top right of a window normally. 
+## HardReload
+Completely restarts LeftWM. 
 
 ## SoftReload
-Restarts LeftWM but remembers the state of all windows. This is useful when playing with the config file
+Restarts LeftWM but remembers the state of all windows. This is useful when playing with the config file.
+
+## CloseWindow
+Closes the window that is currently focused. This is not a forceful quit. It is equivalent to clicking the (x) in the top right of a window normally. 
 
 ## MoveToLastWorkspace
 Takes the window that is currently focused and moves it to the workspace that was active before the current workspace.
 
-## SwapTags
-Swaps the tags in the current workspace with the tags in the previous workspace
-
 ## MoveWindowUp
-re-orders the focused window within the current workspace (moves up in order)
+Re-orders the focused window within the current workspace (moves up in order).
 
 ## MoveWindowDown
-re-orders the focused window within the current workspace (moves down in order)
+Re-orders the focused window within the current workspace (moves down in order).
 
-## FocusWindowUp
-focuses the window that is one higher in order on the current workspace
-
-## FocusWindowDown
-focuses the window that is one lower in order on the current workspace
-
-## NextLayout
-Changes the workspace to a new layout 
-
-## PreviousLayout
-Changes the workspace to the previous layout 
-
-## FocusWorkspaceNext
-moves the focus from the current workspace to the next workspace (next screen)
-
-## FocusWorkspacePrevious
-moves the focus from the current workspace to the previous workspace (previous screen)
-
-## GotoTag
-Changes the tag that is being displayed in a given workspace
+## MoveWindowTop
+Re-orders the focused window within the current workspace (moves to the top of the stack).
 
 ## MoveToTag
-Moves a window to a given tag
+Moves a window to a given tag.
 
+## FocusWindowUp
+Focuses the window that is one higher in order on the current workspace.
 
+## FocusWindowDown
+Focuses the window that is one lower in order on the current workspace.
+
+## NextLayout
+Changes the workspace to a new layout.
+
+## PreviousLayout
+Changes the workspace to the previous layout.
+
+## FocusWorkspaceNext
+Moves the focus from the current workspace to the next workspace (next screen).
+
+## FocusWorkspacePrevious
+Moves the focus from the current workspace to the previous workspace (previous screen).
+
+## GotoTag
+Changes the tag that is being displayed in a given workspace.
+
+## FocusNextTag
+Moves the focus from the current tag to the next tag in a given workspace.
+
+## FocusPreviousTag
+Moves the focus from the current tag to the previous tag in a given workspace.
+
+## SwapTags
+Swaps the tags in the current workspace with the tags in the previous workspace.
+
+## IncreaseMainWidth
+Increases the width of the currently focused window.
+
+## DecreaseMainWidth
+Decreases the width of the currently focused window.
