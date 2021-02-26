@@ -1,5 +1,5 @@
 # Configuring LeftWM 
-### _All code snippet in this section refer to the file `~/.config/leftwm/config.toml`_
+### _All code snippets in this section refer to the file `~/.config/leftwm/config.toml`_
 ### Terms
 - _Default_ refers to the original `config.toml` specified when LeftWM first runs.  
 - _Partial Default_ refers to a command that is in the original `config.toml` but is not the only instance.  
