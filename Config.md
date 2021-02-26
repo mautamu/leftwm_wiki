@@ -339,4 +339,5 @@ key = "x"
 |-|-|:-:|
 | No config.toml file exists | LeftWM does not always ship with a `config.toml`. You will need to execute LeftWM at least once for one to be generated. | Try the following: ``` leftwm-worker ``` |
 | Config.toml is not being parsed | LeftWM ships with a binary called leftwm-check. It might not be installed by the AUR. | Try the following: ``` leftwm-check ``` |
-| Keybinding doesn't work | It's likely you need to specify a value or have a typo. | Refer to the definition above or open a PR |
+| Keybinding doesn't work/foreign keyboards | You may need a modkey or to specify the name of the key, e.g. `eacute` for é. If it is a keypad number, use a modkey with value `lock`.| Refer to [this](https://github.com/leftwm/leftwm/blob/master/src/utils/xkeysym_lookup.rs) list of keys |
+| Keybinding doesn't work | It's likely you need to specify a value or have a typo. | Refer to the definition above or open an issue |
