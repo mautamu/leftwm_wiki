@@ -368,6 +368,7 @@ key = "a"
 ```
 
 **Note: This command requires a value field to be specified**.
+**Note: This command does not apply to all layouts**.
 
 ## DecreaseMainWidth
 
@@ -384,6 +385,7 @@ key = "x"
 ```
 
 **Note: This command requires a value field to be specified**.
+**Note: This command does not apply to all layouts**.
 
 ## Troubleshooting
 
