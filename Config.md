@@ -30,6 +30,7 @@
   - [FocusWindowDown](#focuswindowdown)
   - [NextLayout](#nextlayout)
   - [PreviousLayout](#previouslayout)
+  - [SetLayout](#setlayout)
   - [FocusWorkspaceNext](#focusworkspacenext)
   - [FocusWorkspacePrevious](#focusworkspaceprevious)
   - [GotoTag](#gototag)
@@ -271,6 +272,22 @@ command = "PreviousLayout"
 modifier = ["modkey", "Control"]
 key = "Down"
 ```
+
+## SetLayout
+
+Changes the workspace to the specified layout.
+
+Example:
+
+```toml
+[[keybind]]
+command = "SetLayout"
+value = "Monocle"
+modifier = ["modkey"]
+key = "m"
+```
+
+**Note: This command requires a value field to be specified**.
 
 ## FocusWorkspaceNext
 
