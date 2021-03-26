@@ -122,7 +122,7 @@ Example:
 
 ```toml
 [[keybind]]
-command = "SoftReload"
+command = "HardReload"
 modifier = ["modkey", "Shift"]
 key = "b"
 ```
