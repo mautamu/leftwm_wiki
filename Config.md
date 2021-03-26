@@ -44,11 +44,20 @@
 # Modkey
 
 The modkey is the most important setting. It is used by many other settings and controls how key bindings work.
-For more info please read [this](https://stackoverflow.com/questions/19376338/xcb-keyboard-button-masks-meaning) post on x11 Mod keys
+For more info please read [this](https://stackoverflow.com/questions/19376338/xcb-keyboard-button-masks-meaning) post on x11 Mod keys.
 
 Default: `modkey = "Mod4"`  (windows key)
 
 Example: `modkey = "Mod1"`  
+
+# Mousekey
+
+The mousekey is similarly quite important. This value can be used to determine which key, when held, can assist a mouse drag in resizing or moving a floating window or making a window float or tile.
+For more info please read [this](https://stackoverflow.com/questions/19376338/xcb-keyboard-button-masks-meaning) post on x11 Mod keys.
+
+Default: `mousekey = "Mod4"`  (windows key)
+
+Example: `mousekey = "Mod1"`  
 
 # Tags
 
