@@ -13,6 +13,7 @@
 
 - [Configuring LeftWM](#configuring-leftwm)
 - [Modkey](#modkey)
+- [Mousekey](#mousekey)
 - [Tags](#tags)
 - [Workspaces](#workspaces)
 - [Keybind](#keybind)
