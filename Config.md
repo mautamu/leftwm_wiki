@@ -23,6 +23,7 @@
   - [SoftReload](#softreload)
   - [CloseWindow](#closewindow)
   - [MoveToLastWorkspace](#movetolastworkspace)
+  - [FloatingToTile](#floatingtotile)
   - [MoveWindowUp](#movewindowup)
   - [MoveWindowDown](#movewindowdown)
   - [MoveWindowTop](#movewindowtop)
@@ -174,6 +175,19 @@ Default:
 command = "MoveToLastWorkspace"
 modifier = ["modkey", "Shift"]
 key = "w"
+```
+
+## FloatingToTile
+
+Snaps the focused floating window into the workspace below.
+
+Example:
+
+```toml
+[[keybind]]
+command = "FloatingToTile"
+modifier = ["modkey", "Shift"]
+key = "t"
 ```
 
 ## MoveWindowUp
