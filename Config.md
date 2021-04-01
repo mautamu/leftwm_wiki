@@ -14,6 +14,7 @@
 - [Configuring LeftWM](#configuring-leftwm)
 - [Modkey](#modkey)
 - [Mousekey](#mousekey)
+- [Layouts](#layouts)
 - [Tags](#tags)
 - [Workspaces](#workspaces)
 - [Keybind](#keybind)
@@ -60,6 +61,41 @@ For more info please read [this](https://stackoverflow.com/questions/19376338/xc
 Default: `mousekey = "Mod4"`  (windows key)
 
 Example: `mousekey = "Mod1"`  
+
+
+# Layouts
+
+Leftwm supports an evergrowing different layouts, which define the way that 
+windows are tiled in the tag.
+
+Default (all layouts, check [this enum](https://github.com/leftwm/leftwm/blob/master/src/layouts/mod.rs#L18)
+for the latest list):
+
+```toml
+layouts = [
+    { MainAndVertStack = {} },
+    { MainAndHorizontalStack = {} },
+    { GridHorizontal = {} },
+    { EvenHorizontal = {} },
+    { EvenVertical = {} },
+    { Fibonacci = {} },
+    { CenterMain = {} },
+    { CenterMainBalanced = {} },
+    { Monocle = {} },
+    { RightWiderLeftStack = {} },
+    { LeftWiderRightStack = {} },
+]
+```
+
+Example:
+
+```toml
+layouts = [
+    { MainAndVertStack = {} },
+    { Monocle = {} },
+]
+```
+
 
 # Tags
 
