@@ -65,25 +65,25 @@ Example: `mousekey = "Mod1"`
 
 # Layouts
 
-Leftwm supports an evergrowing different layouts, which define the way that 
-windows are tiled in the tag.
+Leftwm supports an ever-growing amount layouts, which define the way that 
+windows are tiled in the workspace.
 
 Default (all layouts, check [this enum](https://github.com/leftwm/leftwm/blob/master/src/layouts/mod.rs#L18)
 for the latest list):
 
 ```toml
 layouts = [
-    { MainAndVertStack = {} },
-    { MainAndHorizontalStack = {} },
-    { GridHorizontal = {} },
-    { EvenHorizontal = {} },
-    { EvenVertical = {} },
-    { Fibonacci = {} },
-    { CenterMain = {} },
-    { CenterMainBalanced = {} },
-    { Monocle = {} },
-    { RightWiderLeftStack = {} },
-    { LeftWiderRightStack = {} },
+    "MainAndVertStack",
+    "MainAndHorizontalStack",
+    "GridHorizontal",
+    "EvenHorizontal",
+    "EvenVertical",
+    "Fibonacci",
+    "CenterMain",
+    "CenterMainBalanced",
+    "Monocle",
+    "RightWiderLeftStack",
+    "LeftWiderRightStack",
 ]
 ```
 
@@ -91,8 +91,8 @@ Example:
 
 ```toml
 layouts = [
-    { MainAndVertStack = {} },
-    { Monocle = {} },
+    "MainAndVertStack",
+    "Monocle",
 ]
 ```
 
