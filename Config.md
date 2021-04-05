@@ -73,6 +73,7 @@ for the latest list):
 
 ```toml
 layouts = [
+    "MainAndDeck",
     "MainAndVertStack",
     "MainAndHorizontalStack",
     "GridHorizontal",
