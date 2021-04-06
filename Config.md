@@ -43,6 +43,7 @@
   - [SwapTags](#swaptags)
   - [IncreaseMainWidth](#increasemainwidth)
   - [DecreaseMainWidth](#decreasemainwidth)
+  - [SetMarginMultiplier](#setmarginmultiplier)
 - [Troubleshooting](#troubleshooting)
 
 # Modkey
@@ -471,6 +472,25 @@ key = "x"
 ```
 
 **Note: This command requires a value field to be specified**.
+**Note: This command does not apply to all layouts**.
+
+
+## SetMarginMultiplier
+
+Decreases the width of the currently focused window.
+
+Example:
+
+```toml
+[[keybind]]
+command = "SetMarginMultiplier"
+value = "2.5"
+modifier = ["modkey"]
+key = "m"
+```
+
+**Note: This command requires a value field to be specified**.
+*Note: The value needs to be a positive float, use "0.0" for no margins at all, use "1.0" to reset.*
 **Note: This command does not apply to all layouts**.
 
 ## Troubleshooting
