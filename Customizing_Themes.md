@@ -89,3 +89,7 @@ leftwm-state /home/vuimuich/.config/leftwm/themes/current
 *Note: `$SCRIPTPATH/change_to_tag` is supposed to be executed by polybar*
 
 The other big part of the .liquid files is polybar formatting tags. They are described in gread detail [in the polybar wiki](https://github.com/polybar/polybar/wiki/Formatting#format-tags)
+
+*Note: With polybar it can happen in a few situations that you will see an Error-Message instead of your tags.*
+     *This mainly happens when `leftwm-state` fails to deliver proper output during startup.*
+     *This is a known issue (#207 and #275).*
