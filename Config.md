@@ -6,7 +6,7 @@
 ## Terms
 
 - _Default_ refers to the original `config.toml` specified when LeftWM first runs.  
-- _Partial Default_ refers to a command that is in the original `config.toml` but is not the only instance.  
+- _Partial Default_ refers to a command that is in the original `config.toml` but is not the only instance of that command.  
 - _Example_ refers to a snippet that is not in the original `config.toml` but can be added or modified for additional features.
 
 # Table of contents
@@ -14,6 +14,7 @@
 - [Configuring LeftWM](#configuring-leftwm)
 - [Modkey](#modkey)
 - [Mousekey](#mousekey)
+- [Tag Behaviour](#tag-behaviour)
 - [Layouts](#layouts)
 - [Tags](#tags)
 - [Workspaces](#workspaces)
@@ -62,6 +63,13 @@ Default: `mousekey = "Mod4"`  (windows key)
 
 Example: `mousekey = "Mod1"`  
 
+# Tag Behaviour
+
+Starting with LeftWM 0.2.7, the behaviour of [SwapTags](#swaptags) was changed such that if you are on a tag, such as tag 1, and then SwapTags to tag 1, LeftWM will go to the previous tag instead. This behaviour can be disabled with `disable_current_tag_swap`:
+
+Default: `disable_current_tag_swap = false`
+
+Example: `disable_current_tag_swap = true` (returns to old behaviour)
 
 # Layouts
 
