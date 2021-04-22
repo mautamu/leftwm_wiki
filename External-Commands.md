@@ -13,6 +13,7 @@ echo "SetLayout CenterMain" > $XDG_RUNTIME_DIR/leftwm/command.pipe
 | SetLayout | `LayoutName` | |
 | NextLayout | | |
 | PreviousLayout | | |
+| RotateTag | | |
 | SetMarginMultiplier | `multiplier as float` | set a factor by which the margin gets mutliplied, use "1.0" to reset, negative values will be abs-converted |
 | SwapScreen | | swaps two screens/workspaces |
 | SendWorkspaceToTag | `workspace index` `tag_index` | both indizes as integer, focuses `Tag` on `Workspace` |
