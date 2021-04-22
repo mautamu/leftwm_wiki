@@ -35,6 +35,7 @@
   - [NextLayout](#nextlayout)
   - [PreviousLayout](#previouslayout)
   - [SetLayout](#setlayout)
+  - [RotateTag](#rotatetag)
   - [FocusWorkspaceNext](#focusworkspacenext)
   - [FocusWorkspacePrevious](#focusworkspaceprevious)
   - [GotoTag](#gototag)
@@ -358,6 +359,20 @@ key = "m"
 ```
 
 **Note: This command requires a value field to be specified**.
+
+## RotateTag
+
+Rotates the tag/layout. If the layout supports it, the tag will flip horizontally, vertically, or both. 
+For example the fibonacci layout rotates in the four different directions.
+
+Example:
+
+```toml
+[[keybind]]
+command = "RotateTag"
+modifier = ["modkey"]
+key = "z"
+```
 
 ## FocusWorkspaceNext
 
