@@ -45,6 +45,7 @@
   - [IncreaseMainWidth](#increasemainwidth)
   - [DecreaseMainWidth](#decreasemainwidth)
   - [SetMarginMultiplier](#setmarginmultiplier)
+  - [ToggleFullScreen](#togglefullscreen)
 - [Troubleshooting](#troubleshooting)
 
 # Modkey
@@ -507,6 +508,19 @@ key = "m"
 **Note: This command requires a value field to be specified**.
 *Note: The value needs to be a positive float, use "0.0" for no margins at all, use "1.0" to reset.*
 **Note: This command does not apply to all layouts**.
+
+## ToggleFullScreen
+
+Toggles the currently focused window between full screen and not full screen.
+
+Example:
+
+```toml
+[[keybind]]
+command = "ToggleFullScreen"
+modifier = ["modkey"]
+key = "f"
+```
 
 ## Troubleshooting
 
