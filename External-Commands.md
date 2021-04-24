@@ -14,9 +14,9 @@ echo "SetLayout CenterMain" > $XDG_RUNTIME_DIR/leftwm/command.pipe
 | NextLayout | | |
 | PreviousLayout | | |
 | RotateTag | | |
-| SetMarginMultiplier | `multiplier as float` | set a factor by which the margin gets mutliplied, use "1.0" to reset, negative values will be abs-converted |
+| SetMarginMultiplier | `multiplier as float` | set a factor by which the margin gets multiplied, use "1.0" to reset, negative values will be abs-converted |
 | SwapScreen | | swaps two screens/workspaces |
-| SendWorkspaceToTag | `workspace index` `tag_index` | both indizes as integer, focuses `Tag` on `Workspace` |
+| SendWorkspaceToTag | `workspace index` `tag_index` | both indices as integer, focuses `Tag` on `Workspace` |
 | SendWindowToTag | `tag_index` | index as integer, sends currently focused window to `Tag` |
 | MoveWindowToLastWorkspace | | moves currently focused window to last used workspace |
 | MoveWindowDown | | moves currently focused window down once |
@@ -30,3 +30,4 @@ echo "SetLayout CenterMain" > $XDG_RUNTIME_DIR/leftwm/command.pipe
 | FocusPreviousTag | | |
 | FocusWorkspaceNext | | |
 | FocusWorkspacePrevious | | |
+| ToggleFullScreen | | Makes currently focused window fullscreen/non-fullscreen |
