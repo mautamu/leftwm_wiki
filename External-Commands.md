@@ -5,6 +5,15 @@ For example from a shell you could use:
 ```shell
 echo "SetLayout CenterMain" > $XDG_RUNTIME_DIR/leftwm/command.pipe
 ```
+If you are on the leftwm 0.2.8 or above, external commands can be passed in using leftwm-command. Commands that contain arguments require quotes.
+For example:
+```shell
+leftwm-command "SetLayout CenterMain"
+```
+Commands can also be chained together, for example:
+```shell
+leftwm-command "SendWindowToTag 2" "SendWorkspaceToTag 0 2"
+```
 |Command | Arguments (if needed) | Notes |
 |-|-|-|
 | Reload | | Reloads leftwm |
