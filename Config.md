@@ -521,6 +521,7 @@ command = "ToggleFullScreen"
 modifier = ["modkey"]
 key = "f"
 ```
+**Note: This is only available in LeftWM >=0.2.8. It is currently only available through aur/leftwm-git or building from source.**
 
 ## Troubleshooting
 
