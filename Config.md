@@ -6,7 +6,7 @@
 ## Terms
 
 - _Default_ refers to the original `config.toml` specified when LeftWM first runs.  
-- _Partial Default_ refers to a command that is in the original `config.toml` but is not the only instance.  
+- _Partial Default_ refers to a command that is in the original `config.toml` but is not the only instance of that command.  
 - _Example_ refers to a snippet that is not in the original `config.toml` but can be added or modified for additional features.
 
 # Table of contents
@@ -14,6 +14,8 @@
 - [Configuring LeftWM](#configuring-leftwm)
 - [Modkey](#modkey)
 - [Mousekey](#mousekey)
+- [Tag Behaviour](#tag-behaviour)
+- [Layouts](#layouts)
 - [Tags](#tags)
 - [Workspaces](#workspaces)
 - [Keybind](#keybind)
@@ -23,6 +25,7 @@
   - [SoftReload](#softreload)
   - [CloseWindow](#closewindow)
   - [MoveToLastWorkspace](#movetolastworkspace)
+  - [FloatingToTile](#floatingtotile)
   - [MoveWindowUp](#movewindowup)
   - [MoveWindowDown](#movewindowdown)
   - [MoveWindowTop](#movewindowtop)
@@ -32,6 +35,7 @@
   - [NextLayout](#nextlayout)
   - [PreviousLayout](#previouslayout)
   - [SetLayout](#setlayout)
+  - [RotateTag](#rotatetag)
   - [FocusWorkspaceNext](#focusworkspacenext)
   - [FocusWorkspacePrevious](#focusworkspaceprevious)
   - [GotoTag](#gototag)
@@ -40,6 +44,8 @@
   - [SwapTags](#swaptags)
   - [IncreaseMainWidth](#increasemainwidth)
   - [DecreaseMainWidth](#decreasemainwidth)
+  - [SetMarginMultiplier](#setmarginmultiplier)
+  - [ToggleFullScreen](#togglefullscreen)
 - [Troubleshooting](#troubleshooting)
 
 # Modkey
@@ -57,6 +63,50 @@ The mousekey is similarly quite important. This value can be used to determine w
 For more info please read [this](https://stackoverflow.com/questions/19376338/xcb-keyboard-button-masks-meaning) post on x11 Mod keys.
 
 Default: `mousekey = "Mod4"`  (windows key)
+
+Example: `mousekey = "Mod1"`  
+
+# Tag Behaviour
+
+Starting with LeftWM 0.2.7, the behaviour of [SwapTags](#swaptags) was changed such that if you are on a tag, such as tag 1, and then SwapTags to tag 1, LeftWM will go to the previous tag instead. This behaviour can be disabled with `disable_current_tag_swap`:
+
+Default: `disable_current_tag_swap = false`
+
+Example: `disable_current_tag_swap = true` (returns to old behaviour)
+
+# Layouts
+
+Leftwm supports an ever-growing amount layouts, which define the way that 
+windows are tiled in the workspace.
+
+Default (all layouts, check [this enum](https://github.com/leftwm/leftwm/blob/master/src/layouts/mod.rs#L18)
+for the latest list):
+
+```toml
+layouts = [
+    "MainAndDeck",
+    "MainAndVertStack",
+    "MainAndHorizontalStack",
+    "GridHorizontal",
+    "EvenHorizontal",
+    "EvenVertical",
+    "Fibonacci",
+    "CenterMain",
+    "CenterMainBalanced",
+    "Monocle",
+    "RightWiderLeftStack",
+    "LeftWiderRightStack",
+]
+```
+
+Example:
+
+```toml
+layouts = [
+    "MainAndVertStack",
+    "Monocle",
+]
+```
 
 Example: `mousekey = "Mod1"`  
 
@@ -174,6 +224,19 @@ Default:
 command = "MoveToLastWorkspace"
 modifier = ["modkey", "Shift"]
 key = "w"
+```
+
+## FloatingToTile
+
+Snaps the focused floating window into the workspace below.
+
+Example:
+
+```toml
+[[keybind]]
+command = "FloatingToTile"
+modifier = ["modkey", "Shift"]
+key = "t"
 ```
 
 ## MoveWindowUp
@@ -299,6 +362,20 @@ key = "m"
 
 **Note: This command requires a value field to be specified**.
 
+## RotateTag
+
+Rotates the tag/layout. If the layout supports it, the tag will flip horizontally, vertically, or both. 
+For example the fibonacci layout rotates in the four different directions.
+
+Example:
+
+```toml
+[[keybind]]
+command = "RotateTag"
+modifier = ["modkey"]
+key = "z"
+```
+
 ## FocusWorkspaceNext
 
 Moves the focus from the current workspace to the next workspace (next screen).
@@ -414,7 +491,8 @@ key = "x"
 **Note: This command requires a value field to be specified**.
 **Note: This command does not apply to all layouts**.
 
-## DecreaseMainWidth
+
+## SetMarginMultiplier
 
 Decreases the width of the currently focused window.
 
@@ -431,6 +509,20 @@ key = "m"
 **Note: This command requires a value field to be specified**.
 *Note: The value needs to be a positive float, use "0.0" for no margins at all, use "1.0" to reset.*
 **Note: This command does not apply to all layouts**.
+
+## ToggleFullScreen
+
+Toggles the currently focused window between full screen and not full screen.
+
+Example:
+
+```toml
+[[keybind]]
+command = "ToggleFullScreen"
+modifier = ["modkey"]
+key = "f"
+```
+**Note: This is only available in LeftWM >=0.2.8. It is currently only available through aur/leftwm-git or building from source.**
 
 ## Troubleshooting
 
