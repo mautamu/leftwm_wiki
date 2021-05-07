@@ -108,6 +108,7 @@ layouts = [
 ]
 ```
 
+Example: `mousekey = "Mod1"`  
 
 # Tags
 
