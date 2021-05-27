@@ -414,9 +414,9 @@ key = "x"
 **Note: This command requires a value field to be specified**.
 **Note: This command does not apply to all layouts**.
 
-## DecreaseMainWidth
+## SetMarginMultiplier
 
-Decreases the width of the currently focused window.
+Set the multiplier applied to the configured margin value.
 
 Example:
 
